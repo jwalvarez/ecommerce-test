@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import BottomHeader from "./BottomHeader";
 
 const Nav = () => {
+  const [showMenu, setShowMenu] = useState(true);
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
   return (
     <div className="sticky top-0 z-50 w-full bg-white/60 backdrop-blur pt-4 pb-2 px-20 border-b-2 ">
       <header className="flex justify-between">
         <div className="flex">
-          <i className="my-auto mx-2">
+          <i onClick={toggleMenu} className="my-auto mx-2 cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -64,7 +69,7 @@ const Nav = () => {
           </i>
         </div>
       </header>
-      <BottomHeader />
+      {<BottomHeader show={showMenu} />}
     </div>
   );
 };

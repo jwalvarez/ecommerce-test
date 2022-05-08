@@ -5,7 +5,7 @@ import Card from "./Card";
 
 const Banner = () => {
   return (
-    <section className="-top-[80px] relative px-20">
+    <section className="-top-[70px] relative px-20">
       <img
         className="absolute inset-0 object-[25%] object-cover w-full h-full opacity-25 sm:opacity-100"
         src="https://images.pexels.com/photos/7607290/pexels-photo-7607290.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"

@@ -16,12 +16,19 @@ const categories = [
   "Digital Gift Card",
 ];
 
-const BottomHeader = () => {
+const BottomHeader = ({ show }) => {
+  const style = show
+    ? "mt-5 mb-4 transition-all duration-500"
+    : "invisible transition-all opacity-0 -translate-y-4 duration-300";
+
   return (
-    <div className="py-1 mt-2 w-full">
-      <ul className="flex justify-center">
+    <div className={style}>
+      <ul className="flex xl:justify-center overflow-x-auto">
         {categories.map((category, index) => (
-          <li key={index} className="font-sans text-xs font-bold mx-2">
+          <li
+            key={index}
+            className="whitespace-nowrap w-auto font-sans text-xs text-black font-bold mx-2"
+          >
             {category}
           </li>
         ))}
