@@ -6,6 +6,11 @@ import Card from "./components/Card";
 import Banner from "./components/Banner";
 import Nav from "./components/Nav";
 import BottomHeader from "./components/BottomHeader";
+import vector from "./vector.png";
+import Step from "./components/Step";
+import bannerImg from "./pexels-adrienne-andersen-2661256.jpg";
+import skinFirstImg from "./pexels-ron-lach-8140901.jpg";
+import makeupSecondImg from "./pexels-ron-lach-8140898.jpg";
 
 const abouts = [
   {
@@ -97,7 +102,7 @@ const App = () => {
         <div className="flex justify-between">
           <span className="flex">
             <h2 className="font-bold text-lg my-2 text-[rgb(34,34,34)]">
-              Productos Kiwier
+              Nuestros kiwi productos destacados
             </h2>
             <a href="" className="text-xl my-auto ml-2">
               🥝
@@ -118,56 +123,228 @@ const App = () => {
                 price={product["price"]}
                 imageUrl={product["product_image"]}
                 category={product["category_1"]}
+                mr={product == products[products.length - 1] ? 0 : 6}
               />
             ))}
           </div>
         </div>
 
-        <Card
-          title={"Productos para tu piel."}
-          description={
-            "Descubre productos increibles para el cuidado de tu piel, solo en Kiwier."
-          }
-        />
-
-        <div className="w-full mb-10">
-          <div className="w-full flex justify-start whitespace-nowrap my-auto h-full overflow-auto">
-            {products.map((product) => (
-              <Product
-                key={product["sku"]}
-                productName={product["product_name"]}
-                productShortDescription={product["short_description"]}
-                price={product["price"]}
-                imageUrl={product["product_image"]}
-                category={product["category_1"]}
-              />
-            ))}
+        <div className="flex justify-between w-full mb-10">
+          <div className="flex h-auto w-auto pr-4">
+            <Card
+              title={"Productos para tu piel."}
+              description={
+                "Descubre productos increibles para el cuidado de tu piel, solo en Kiwier."
+              }
+              img={vector}
+            />
+          </div>
+          <div className="flex justify-end whitespace-nowrap my-auto h-full overflow-auto">
+            {products.length != 0 && (
+              <>
+                <Product
+                  key={products[0]["sku"]}
+                  productName={products[0]["product_name"]}
+                  productShortDescription={products[0]["short_description"]}
+                  price={products[0]["price"]}
+                  imageUrl={products[0]["product_image"]}
+                  category={products[0]["category_1"]}
+                />
+                <Product
+                  key={products[1]["sku"]}
+                  productName={products[1]["product_name"]}
+                  productShortDescription={products[1]["short_description"]}
+                  price={products[1]["price"]}
+                  imageUrl={products[1]["product_image"]}
+                  category={products[1]["category_1"]}
+                  mr={0}
+                />
+              </>
+            )}
           </div>
         </div>
       </section>
+
+      <hr className="mx-32" />
+      <section className="bg-gray-50 w-full h-auto p-10 px-32">
+        <div className="flex justify-center my-20">
+          <Step
+            title={"Skin first."}
+            description={
+              "Our skincare essentials are designed to make you look and feel your glowy, dewy best before you even think about makeup."
+            }
+            buttonText={"Comprar para el cuidado de la piel"}
+          />
+        </div>
+
+        <div className="flex">
+          <div className="w-auto">
+            <div className="flex justify-end">
+              {products.length != 0 && (
+                <>
+                  <Product
+                    key={products[0]["sku"]}
+                    productName={products[0]["product_name"]}
+                    productShortDescription={products[0]["short_description"]}
+                    price={products[0]["price"]}
+                    imageUrl={products[0]["product_image"]}
+                    category={products[0]["category_1"]}
+                  />
+                  <Product
+                    key={products[1]["sku"]}
+                    productName={products[1]["product_name"]}
+                    productShortDescription={products[1]["short_description"]}
+                    price={products[1]["price"]}
+                    imageUrl={products[1]["product_image"]}
+                    category={products[1]["category_1"]}
+                  />
+                  <Product
+                    key={products[0]["sku"]}
+                    productName={products[0]["product_name"]}
+                    productShortDescription={products[0]["short_description"]}
+                    price={products[0]["price"]}
+                    imageUrl={products[0]["product_image"]}
+                    category={products[0]["category_1"]}
+                    mr={0}
+                  />
+                </>
+              )}
+            </div>
+            <div className="flex justify-end">
+              {products.length != 0 && (
+                <>
+                  <Product
+                    key={products[0]["sku"]}
+                    productName={products[0]["product_name"]}
+                    productShortDescription={products[0]["short_description"]}
+                    price={products[0]["price"]}
+                    imageUrl={products[0]["product_image"]}
+                    category={products[0]["category_1"]}
+                  />
+                  <Product
+                    key={products[1]["sku"]}
+                    productName={products[1]["product_name"]}
+                    productShortDescription={products[1]["short_description"]}
+                    price={products[1]["price"]}
+                    imageUrl={products[1]["product_image"]}
+                    category={products[1]["category_1"]}
+                  />
+                  <Product
+                    key={products[0]["sku"]}
+                    productName={products[0]["product_name"]}
+                    productShortDescription={products[0]["short_description"]}
+                    price={products[0]["price"]}
+                    imageUrl={products[0]["product_image"]}
+                    category={products[0]["category_1"]}
+                    mr={0}
+                  />
+                </>
+              )}
+            </div>
+          </div>
+          <div className="w-2/5 pl-10 h-auto">
+            <Card
+              title={"Productos kiwi"}
+              description={
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, praesentium voluptatem omnis atque culpa repellendus."
+              }
+              img={skinFirstImg}
+            />
+          </div>
+        </div>
+      </section>
+
+      <hr className="mx-32" />
+      <section className="bg-gray-50 w-full h-auto p-10 px-32">
+        <div className="flex justify-center my-20">
+          <Step
+            title={"Makeup second."}
+            description={
+              "Our skincare essentials are designed to make you look and feel your glowy, dewy best before you even think about makeup."
+            }
+            buttonText={"Comprar para el maquillaje"}
+          />
+        </div>
+
+        <div className="flex">
+          <div className="w-2/5 pr-10 h-auto">
+            <Card
+              title={"Productos kiwi"}
+              description={
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, praesentium voluptatem omnis atque culpa repellendus."
+              }
+              img={makeupSecondImg}
+            />
+          </div>
+          <div className="w-auto">
+            <div className="flex justify-end">
+              {products.length != 0 && (
+                <>
+                  <Product
+                    key={products[0]["sku"]}
+                    productName={products[0]["product_name"]}
+                    productShortDescription={products[0]["short_description"]}
+                    price={products[0]["price"]}
+                    imageUrl={products[0]["product_image"]}
+                    category={products[0]["category_1"]}
+                  />
+                  <Product
+                    key={products[1]["sku"]}
+                    productName={products[1]["product_name"]}
+                    productShortDescription={products[1]["short_description"]}
+                    price={products[1]["price"]}
+                    imageUrl={products[1]["product_image"]}
+                    category={products[1]["category_1"]}
+                  />
+                  <Product
+                    key={products[0]["sku"]}
+                    productName={products[0]["product_name"]}
+                    productShortDescription={products[0]["short_description"]}
+                    price={products[0]["price"]}
+                    imageUrl={products[0]["product_image"]}
+                    category={products[0]["category_1"]}
+                    mr={0}
+                  />
+                </>
+              )}
+            </div>
+            <div className="flex justify-end">
+              {products.length != 0 && (
+                <>
+                  <Product
+                    key={products[0]["sku"]}
+                    productName={products[0]["product_name"]}
+                    productShortDescription={products[0]["short_description"]}
+                    price={products[0]["price"]}
+                    imageUrl={products[0]["product_image"]}
+                    category={products[0]["category_1"]}
+                  />
+                  <Product
+                    key={products[1]["sku"]}
+                    productName={products[1]["product_name"]}
+                    productShortDescription={products[1]["short_description"]}
+                    price={products[1]["price"]}
+                    imageUrl={products[1]["product_image"]}
+                    category={products[1]["category_1"]}
+                  />
+                  <Product
+                    key={products[0]["sku"]}
+                    productName={products[0]["product_name"]}
+                    productShortDescription={products[0]["short_description"]}
+                    price={products[0]["price"]}
+                    imageUrl={products[0]["product_image"]}
+                    category={products[0]["category_1"]}
+                    mr={0}
+                  />
+                </>
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+      <div className="h-96"></div>
     </>
   );
 };
 
 export default App;
-
-// {products.length != 0 && (
-//   <>
-//     <Product
-//       key={products[0]["sku"]}
-//       productName={products[0]["product_name"]}
-//       productShortDescription={products[0]["short_description"]}
-//       price={products[0]["price"]}
-//       imageUrl={products[0]["product_image"]}
-//       category={products[0]["category_1"]}
-//     />
-//     <Product
-//       key={products[1]["sku"]}
-//       productName={products[1]["product_name"]}
-//       productShortDescription={products[1]["short_description"]}
-//       price={products[1]["price"]}
-//       imageUrl={products[1]["product_image"]}
-//       category={products[1]["category_1"]}
-//     />
-//   </>
-// )}
