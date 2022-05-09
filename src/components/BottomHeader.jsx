@@ -27,7 +27,7 @@ const BottomHeader = ({ show }) => {
         {categories.map((category, index) => (
           <li
             key={index}
-            className="whitespace-nowrap w-auto font-sans text-xs text-black font-bold mx-2"
+            className="hover:text-indigo-600 hover:underline hover:cursor-pointer whitespace-nowrap w-auto font-sans text-xs text-black font-bold mx-2"
           >
             {category}
           </li>

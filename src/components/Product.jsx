@@ -10,7 +10,7 @@ const Product = ({
   category,
 }) => {
   return (
-    <div className="bg-[rgb(250,250,250)] w-52 rounded hover:drop-shadow-[0px_6px_rgba(24,24,24,1)] outline outline-1 outline-gray-200 mr-6 mb-6 transition-all duration-300">
+    <div className="bg-[rgb(250,250,250)] w-auto rounded hover:drop-shadow-[0px_6px_rgba(24,24,24,1)] outline outline-1 outline-gray-200 mr-6 mb-6 transition-all duration-300">
       <figure className="relative overflow-hidden">
         <Badge category={category} />
         <a className="z-10 absolute bottom-0 w-full text-xs py-1 px-6 mx-auto my-1">

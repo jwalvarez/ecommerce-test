@@ -15,8 +15,8 @@ body {
 } */
 
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 6px;
+  width: 14px;
+  height: 8px;
 }
 
 /* Track */
@@ -26,10 +26,10 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  @apply bg-indigo-400;
+  @apply bg-[rgb(24,24,24)];
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-indigo-600;
+  @apply bg-gray-600;
 }

@@ -8,14 +8,17 @@ const Nav = () => {
     setShowMenu(!showMenu);
   };
   return (
-    <div className="sticky top-0 z-50 w-full bg-white/60 backdrop-blur pt-4 pb-2 px-20 border-b-2 ">
+    <div className="sticky top-0 z-50 w-full bg-white/60 backdrop-blur pt-4 pb-2 px-32 border-b-2 ">
       <header className="flex justify-between">
         <div className="flex">
-          <i onClick={toggleMenu} className="my-auto mx-2 cursor-pointer">
+          <i
+            onClick={toggleMenu}
+            className="hover:text-indigo-300 my-auto mx-2 cursor-pointer"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
+              width="20"
+              height="20"
               fill="currentColor"
               className="bi bi-list"
               viewBox="0 0 16 16"
@@ -29,8 +32,8 @@ const Nav = () => {
           <i className="my-auto mx-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
+              width="20"
+              height="20"
               fill="currentColor"
               className="bi bi-search"
               viewBox="0 0 16 16"
@@ -46,8 +49,8 @@ const Nav = () => {
           <i className="my-auto mx-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
+              width="20"
+              height="20"
               fill="currentColor"
               className="bi bi-person"
               viewBox="0 0 16 16"
@@ -58,8 +61,8 @@ const Nav = () => {
           <i className="my-auto mx-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
+              width="20"
+              height="20"
               fill="currentColor"
               className="bi bi-bag"
               viewBox="0 0 16 16"
