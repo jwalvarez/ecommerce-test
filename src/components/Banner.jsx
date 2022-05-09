@@ -26,7 +26,7 @@ const Banner = () => {
           <h2 className="font-md text-2xl italic text-black">
             Encuentro tus productos de skincare.
           </h2>
-          <div className="flex w-full gap-4 mt-4 text-center">
+          <div className="flex justify-between gap-2 mt-4 w-full text-center">
             <Button text="Descubrir" />
             <SecondaryButton text="Tienda" />
           </div>
