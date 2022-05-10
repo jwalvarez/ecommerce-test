@@ -8,8 +8,8 @@ const Nav = () => {
     setShowMenu(!showMenu);
   };
   return (
-    <div className="sticky top-0 z-50 w-full bg-white/60 backdrop-blur pt-4 pb-2 px-32 border-b-2 ">
-      <header className="flex justify-between">
+    <div className="sticky top-0 z-50 w-full bg-white/60 backdrop-blur pt-4 pb-2 border-b-2 ">
+      <header className="flex justify-between w-3/4 mx-auto">
         <div className="flex">
           <i
             onClick={toggleMenu}
@@ -42,7 +42,7 @@ const Nav = () => {
             </svg>
           </i>
         </div>
-        <a href="http://" className="text-xl font-bold italic ">
+        <a href="#" className="text-xl font-bold italic ">
           Kiwier.
         </a>
         <div className="flex">

@@ -10,14 +10,13 @@ const Product = ({
   category,
   mr = 6,
 }) => {
+  const style = mr
+    ? "mr-6 bg-[rgb(250,250,250)] w-auto rounded hover:drop-shadow-[0px_6px_rgba(24,24,24,1)] outline outline-1 outline-gray-200 mb-6 transition-all duration-300"
+    : "mr-0 bg-[rgb(250,250,250)] w-auto rounded hover:drop-shadow-[0px_6px_rgba(24,24,24,1)] outline outline-1 outline-gray-200 mb-6 transition-all duration-300";
+
   return (
-    <div
-      className={
-        `mr-${mr} ` +
-        "bg-[rgb(250,250,250)] w-auto rounded hover:drop-shadow-[0px_6px_rgba(24,24,24,1)] outline outline-1 outline-gray-200 mb-6 transition-all duration-300"
-      }
-    >
-      <figure className="relative overflow-hidden">
+    <div className={style}>
+      <figure className="relative overflow-hidden w-60">
         <Badge category={category} />
         <a className="z-10 absolute bottom-0 w-full text-xs py-1 px-6 mx-auto my-1">
           <div className="flex justify-center cursor-default">
@@ -26,7 +25,7 @@ const Product = ({
           </div>
         </a>
         <img
-          className="h-60 w-full rounded-t cursor-pointer hover:scale-110 transition-all duration-300"
+          className="h-72 w-full rounded-t cursor-pointer hover:scale-110 transition-all duration-300"
           src={imageUrl}
           alt="Imagen de producto"
         />

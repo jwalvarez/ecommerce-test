@@ -11,6 +11,7 @@ import Step from "./components/Step";
 import bannerImg from "./pexels-adrienne-andersen-2661256.jpg";
 import skinFirstImg from "./pexels-ron-lach-8140901.jpg";
 import makeupSecondImg from "./pexels-ron-lach-8140898.jpg";
+import Divider from "./components/Divider";
 
 const abouts = [
   {
@@ -71,12 +72,12 @@ const App = () => {
 
       <Banner />
 
-      <section className="relative bg-indigo-50 px-32 py-10">
-        <div className="flex w-full">
+      <section className="relative bg-indigo-50 py-10">
+        <div className="flex w-3/4 mx-auto">
           {abouts.map((description, index) => (
             <div
               key={index}
-              className="py-4 mx-4 hover:text-indigo-400 cursor-default transition-all duration-700"
+              className="py-4 px-10 hover:text-indigo-400 cursor-default transition-all duration-700"
             >
               <span>
                 <svg
@@ -98,8 +99,8 @@ const App = () => {
         </div>
       </section>
 
-      <section className="bg-gray-50 w-full h-auto p-10 px-32">
-        <div className="flex justify-between">
+      <section className="w-full h-auto py-10">
+        <div className="flex justify-between w-3/4 mx-auto">
           <span className="flex">
             <h2 className="font-bold text-lg my-2 text-[rgb(34,34,34)]">
               Nuestros kiwi productos destacados
@@ -113,7 +114,7 @@ const App = () => {
           </span>
         </div>
 
-        <div className="w-full mb-10">
+        <div className="mb-10 w-3/4 mx-auto">
           <div className="w-full flex justify-start whitespace-nowrap my-auto h-full overflow-auto">
             {products.map((product) => (
               <Product
@@ -129,8 +130,8 @@ const App = () => {
           </div>
         </div>
 
-        <div className="flex justify-between w-full mb-10">
-          <div className="flex h-auto w-auto pr-4">
+        <div className="flex justify-between w-3/4 mx-auto mb-10">
+          <div className="flex h-auto pr-4 w-3/5">
             <Card
               title={"Productos para tu piel."}
               description={
@@ -139,7 +140,7 @@ const App = () => {
               img={vector}
             />
           </div>
-          <div className="flex justify-end whitespace-nowrap my-auto h-full overflow-auto">
+          <div className="w-auto flex justify-end whitespace-nowrap my-auto h-full overflow-auto">
             {products.length != 0 && (
               <>
                 <Product
@@ -149,6 +150,7 @@ const App = () => {
                   price={products[0]["price"]}
                   imageUrl={products[0]["product_image"]}
                   category={products[0]["category_1"]}
+                  mr={6}
                 />
                 <Product
                   key={products[1]["sku"]}
@@ -165,8 +167,8 @@ const App = () => {
         </div>
       </section>
 
-      <hr className="mx-32" />
-      <section className="bg-gray-50 w-full h-auto p-10 px-32">
+      <Divider text={"Products"} />
+      <section className="w-full h-auto py-10">
         <div className="flex justify-center my-20">
           <Step
             title={"Skin first."}
@@ -177,7 +179,7 @@ const App = () => {
           />
         </div>
 
-        <div className="flex">
+        <div className="flex w-3/4 mx-auto justify-between">
           <div className="w-auto">
             <div className="flex justify-end">
               {products.length != 0 && (
@@ -205,7 +207,7 @@ const App = () => {
                     price={products[0]["price"]}
                     imageUrl={products[0]["product_image"]}
                     category={products[0]["category_1"]}
-                    mr={0}
+                    mr={false}
                   />
                 </>
               )}
@@ -254,9 +256,9 @@ const App = () => {
         </div>
       </section>
 
-      <hr className="mx-32" />
-      <section className="bg-gray-50 w-full h-auto p-10 px-32">
-        <div className="flex justify-center my-20">
+      <Divider text={"Makeups"} />
+      <section className="w-full h-auto py-10">
+        <div className="flex justify-center my-20 w-3/4 mx-auto">
           <Step
             title={"Makeup second."}
             description={
@@ -266,7 +268,7 @@ const App = () => {
           />
         </div>
 
-        <div className="flex">
+        <div className="flex justify-between w-3/4 mx-auto">
           <div className="w-2/5 pr-10 h-auto">
             <Card
               title={"Productos kiwi"}
@@ -303,7 +305,7 @@ const App = () => {
                     price={products[0]["price"]}
                     imageUrl={products[0]["product_image"]}
                     category={products[0]["category_1"]}
-                    mr={0}
+                    mr={false}
                   />
                 </>
               )}
@@ -334,7 +336,7 @@ const App = () => {
                     price={products[0]["price"]}
                     imageUrl={products[0]["product_image"]}
                     category={products[0]["category_1"]}
-                    mr={0}
+                    mr={false}
                   />
                 </>
               )}
